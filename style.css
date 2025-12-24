@@ -1,1 +1,219 @@
+* {
+  box-sizing: border-box;
+}
 
+body {
+  font-family: Arial, sans-serif;
+  background: #f6f6f6;
+  margin: 0;
+  padding: 20px;
+  color: #222;
+}
+
+.app {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* header */
+h1 {
+  margin: 0 0 8px;
+}
+
+.subtitle {
+  margin: 0 0 18px;
+  color: #555;
+}
+
+/* card */
+.card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 16px;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+h2 {
+  margin: 0 0 12px;
+}
+
+h3 {
+  margin: 14px 0 10px;
+}
+
+/* form */
+.form .grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  align-items: end;
+}
+
+@media (max-width: 900px) {
+  .form .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .form .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.field span {
+  display: block;
+  font-size: 13px;
+  color: #444;
+  margin-bottom: 6px;
+  min-height: 18px;
+  white-space: nowrap;
+}
+
+.field input,
+.field select {
+  width: 100%;
+  padding: 9px 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #fff;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+/* приятный фокус (джун-уровень, без фанатизма) */
+.field input:focus,
+.field select:focus {
+  border-color: #66b9d6;
+  box-shadow: 0 0 0 3px rgba(102, 185, 214, 0.25);
+}
+
+/* checkbox field */
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: flex-start;
+}
+
+.checkbox span {
+  margin: 0;
+}
+
+.checkbox input {
+  width: 18px;
+  height: 18px;
+}
+
+/* extra blocks */
+.hidden {
+  display: none;
+}
+
+.extra {
+  margin-top: 14px;
+  padding-top: 10px;
+  border-top: 1px dashed #ddd;
+}
+
+/* buttons */
+.actions {
+  margin-top: 12px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+button {
+  padding: 9px 12px;
+  border: 1px solid #999;
+  background: #eee;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.05s;
+}
+
+button:hover {
+  background: #e2e2e2;
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+button.primary {
+  background: #d9f3ff;
+  border-color: #66b9d6;
+}
+
+button.primary:hover {
+  background: #cbeeff;
+}
+
+button.danger {
+  background: #ffe2e7;
+  border-color: #d86a7b;
+}
+
+button.danger:hover {
+  background: #ffd5dc;
+}
+
+.hint {
+  font-size: 13px;
+  color: #666;
+  margin-top: 10px;
+}
+
+/* table */
+.table-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.badge {
+  border: 1px solid #66b9d6;
+  background: #d9f3ff;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 14px;
+}
+
+.table-wrap {
+  overflow: auto;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 900px;
+}
+
+th,
+td {
+  border-bottom: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+  font-size: 14px;
+}
+
+th {
+  background: #f1f1f1;
+  border-bottom: 1px solid #ccc;
+}
+
+tbody tr:hover {
+  background: #f7fbff;
+}
+
+/* footer */
+.footer {
+  text-align: center;
+  color: #666;
+}
